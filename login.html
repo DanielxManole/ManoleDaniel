@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Freelancing Studenți</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Freelancing Studenți</h1>
+           <nav>
+            <ul class="nav-buttons">
+            <li><a href="index.html" class="nav-btn">Acasă</a></li>
+            <li><a href="about.html" class="nav-btn">Despre</a></li>
+            <li><a href="login.html" class="nav-btn active">Login</a></li>
+            <li><a href="register.html" class="nav-btn">Înregistrare</a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <h2>Conectează-te la contul tău</h2>
+            <p>Bine ai venit pe platforma noastră! Te rugăm să te autentifici pentru a putea accesa proiectele disponibile.</p>
+
+            <form action="/procesare-login" method="POST" class="login-form">
+                <fieldset>
+                    <legend>Autentificare</legend>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Introdu adresa ta de email">
+
+                    <label for="parola">Parolă:</label>
+                    <input type="password" id="parola" name="parola" required placeholder="Introdu parola">
+
+                    <label for="tip_utilizator">Tip utilizator:</label>
+                    <select id="tip_utilizator" name="tip_utilizator" required>
+                        <option value="freelancer">Freelancer</option>
+                        <option value="angajator">Angajator</option>
+                    </select>
+
+                    <button type="submit" class="btn">Logare</button>
+
+                    <p class="social-login">
+                        Sau loghează-te cu:
+                        <a href="/google-login" class="social">Google</a> |
+                        <a href="/facebook-login" class="social">Facebook</a>
+                    </p>
+                </fieldset>
+            </form>
+
+            <div class="extra-links">
+                <p>Nu ai cont? <a href="register.html">Creează un cont</a>.</p>
+                <p>Ai uitat parola? <a href="/recuperare-parola">Recuperează parola</a>.</p>
+                <p>Citește <a href="/politica-de-confidentialitate">politica de confidențialitate</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Confidențialitatea datelor tale este foarte importantă pentru noi. Toate informațiile tale sunt protejate.</p>
+        <p>&copy; 2025 Freelancing Studenți. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>
