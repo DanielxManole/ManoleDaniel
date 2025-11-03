@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proiecte Disponibile - Freelancing Studenți</title>
+    <title>Aplicare Proiect - Freelancing Studenți</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Grid Layout pentru pagina proiecte */
+        /* Grid Layout */
         body {
             display: grid;
             grid-template-areas:
@@ -26,30 +26,47 @@
         aside { grid-area: aside; background: #d7e3fc; padding: 20px; display: block; }
         footer { grid-area: footer; text-align: center; padding: 20px; background: #494D5F; color: white; }
 
-        /* Carduri proiecte */
-        .proiecte-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .proiect-card {
+        /* Formular aplicare */
+        .aplicare-form {
             background: linear-gradient(135deg, #577e8a, #d7e3fc);
-            padding: 20px;
+            padding: 30px;
             border-radius: 12px;
-            flex: 1 1 250px;
-            max-width: 300px;
+            max-width: 600px;
+            margin: 20px auto;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
         }
 
-        .proiect-card img {
+        .aplicare-form label {
             display: block;
-            margin: 0 auto 10px;
-            max-width: 100%;
-            height: auto;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .aplicare-form input,
+        .aplicare-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        .aplicare-form button {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #577e8a;
+            color: white;
+            border: none;
+            padding: 12px;
             border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .aplicare-form button:hover {
+            background-color: #86969b;
         }
 
         /* Buton Mergi sus */
@@ -66,11 +83,12 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             z-index: 1000;
         }
+
         #back-to-top:hover {
             background-color: #86969b;
         }
 
-        /* Responsive @media */
+        /* Responsive */
         @media (max-width: 900px) {
             body {
                 grid-template-areas:
@@ -83,77 +101,52 @@
             }
 
             nav, aside { text-align: center; padding: 10px; }
-            .proiect-card { max-width: 100%; margin: 0 auto; }
+            .aplicare-form { max-width: 100%; padding: 20px; }
             h1, h2, h3 { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body id="top">
-
 <header>
-    <div class="container">
-        <h1 class="logo">Freelancing Studenți</h1>
-    </div>
+    <h1 class="logo">Freelancing Studenți</h1>
 </header>
 
 <nav>
     <ul style="list-style:none; padding:0;">
         <li><a href="index.html">Acasă</a></li>
         <li><a href="about.html">Despre</a></li>
-        <li><a href="proiecte.html" style="text-decoration:underline;">Proiecte</a></li>
+        <li><a href="proiecte.html">Proiecte</a></li>
         <li><a href="profil.html">Profil</a></li>
         <li><a href="about.html">Ajutor</a></li>
     </ul>
 </nav>
 
 <aside>
-    <h3>Filtre</h3>
-    <p>🔹 HTML/CSS</p>
-    <p>🔹 JavaScript</p>
-    <p>🔹 Design Grafic</p>
-    <p>🔹 Aplicații Mobile</p>
+    <h3>Informații utile</h3>
+    <p>📅 Termene limită</p>
+    <p>💬 Contact client</p>
+    <p>⚠️ Instrucțiuni speciale</p>
 </aside>
 
 <main>
-    <h2>Proiecte Disponibile</h2>
-    <p>Aplică la proiecte care se potrivesc abilităților tale.</p>
+    <h2>Aplicare Proiect</h2>
+    <p>Completează formularul de mai jos pentru a aplica la proiect.</p>
 
-    <div class="proiecte-container">
-        <div class="proiect-card">
-            <img src="site-web.jpg" alt="Site web">
-            <h3>Creare site web personalizat</h3>
-            <p>HTML, CSS, JavaScript</p>
-            <a href="detalii-proiect.html" class="social">Vezi detalii</a>
-        </div>
+    <form class="aplicare-form" action="/procesare-aplicare" method="POST" enctype="multipart/form-data">
+        <label for="nume">Nume complet:</label>
+        <input type="text" id="nume" name="nume" required placeholder="Introdu numele tău">
 
-        <div class="proiect-card">
-            <img src="app-mobil.jpg" alt="Aplicație mobilă">
-            <h3>Aplicație mobilă task-uri</h3>
-            <p>Android / iOS, Flutter</p>
-            <a href="detalii-proiect.html" class="social">Vezi detalii</a>
-        </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Introdu email-ul tău">
 
-        <div class="proiect-card">
-            <img src="logo-design.jpg" alt="Design logo">
-            <h3>Design grafic logo</h3>
-            <p>Illustrator, Photoshop</p>
-            <a href="detalii-proiect.html" class="social">Vezi detalii</a>
-        </div>
+        <label for="mesaj">Mesaj / Scrisoare de intenție:</label>
+        <textarea id="mesaj" name="mesaj" rows="5" required placeholder="Scrie de ce ești potrivit pentru acest proiect"></textarea>
 
-        <div class="proiect-card">
-            <img src="seo-blog.jpg" alt="SEO blog">
-            <h3>Scriere conținut SEO</h3>
-            <p>Articole optimizate SEO</p>
-            <a href="detalii-proiect.html" class="social">Vezi detalii</a>
-        </div>
+        <label for="fisier">Atașează CV sau portofoliu (optional):</label>
+        <input type="file" id="fisier" name="fisier">
 
-        <div class="proiect-card">
-            <img src="animatie2d.jpg" alt="Animație 2D">
-            <h3>Creare animație 2D</h3>
-            <p>Storyboard, editare video</p>
-            <a href="detalii-proiect.html" class="social">Vezi detalii</a>
-        </div>
-    </div>
+        <button type="submit">Trimite aplicarea</button>
+    </form>
 </main>
 
 <footer>

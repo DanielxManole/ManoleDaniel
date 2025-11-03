@@ -4,23 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperare Parolă - Freelancing Studenți</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 style="text-align: center;">Recuperare Parolă</h1>
+<body id="top">
 
-    <p style="text-align: center;">Introdu adresa ta de email pentru a primi instrucțiuni pentru resetarea parolei.</p>
+    <header>
+        <div class="container">
+            <h1 class="logo">Freelancing Studenți</h1>
+            <nav>
+                <ul class="nav-buttons">
+                    <li><a href="index.html" class="nav-btn">Acasă</a></li>
+                    <li><a href="about.html" class="nav-btn">Despre</a></li>
+                    <li><a href="login.html" class="nav-btn">Login</a></li>
+                    <li><a href="inregistrare.html" class="nav-btn">Înregistrare</a></li>
+                    <li><a href="about.html" class="nav-btn">Ajutor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <form action="/procesare-recuperare-parola" method="POST" style="text-align: center;">
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required placeholder="Introdu adresa ta de email"><br><br>
+    <main>
+        <section class="login-section">
+            <h2>Recuperare Parolă</h2>
+            <p>Introdu adresa ta de email și îți vom trimite un link pentru resetarea parolei contului tău.</p>
 
-        <button type="submit">Trimite instrucțiuni</button>
-    </form>
+            <form action="/procesare-recuperare-parola" method="POST" class="login-form">
+                <fieldset>
+                    <legend>Resetare parolă</legend>
 
-    <p style="text-align: center;">Ai deja o parolă? <a href="login.html">Conectează-te aici</a></p>
+                    <label for="email">Adresa de email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Introdu adresa ta de email">
 
-    <footer style="text-align: center; font-size: 12px; color: gray; margin-top: 30px;">
+                    <button type="submit" class="btn">Trimite instrucțiuni</button>
+                </fieldset>
+            </form>
+
+            <div class="extra-links">
+                <p>Ți-ai amintit parola? <a href="login.html">Conectează-te aici</a>.</p>
+                <p>Nu ai cont? <a href="inregistrare.html">Creează un cont nou</a>.</p>
+            </div>
+        </section>
+
+        <section class="login-section" style="padding-top:40px;">
+            <div class="login-form" style="max-width: 700px;">
+                <h3>🔒 Securitatea contului tău</h3>
+                <p>Freelancing Studenți utilizează metode moderne de criptare pentru a-ți proteja datele personale și parola. Linkul de resetare trimis pe email va fi valabil doar pentru o perioadă limitată de timp, pentru a preveni accesul neautorizat.</p>
+
+                <p>Asigură-te că:</p>
+                <ul style="list-style:none; padding:0;">
+                    <li>✅ Verifici și folderul de spam dacă nu primești emailul imediat.</li>
+                    <li>✅ Folosești o parolă unică, dificil de ghicit.</li>
+                    <li>✅ Nu partajezi linkul de resetare cu alte persoane.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Protejăm confidențialitatea și securitatea contului tău.</p>
         <p>&copy; 2025 Freelancing Studenți. Toate drepturile rezervate.</p>
     </footer>
+<a href="#top" id="back-to-top">⬆️</a>
 </body>
 </html>

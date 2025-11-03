@@ -3,20 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelancing Studenți</title>
+    <title>Freelancing Studenți - Acasă</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 style="text-align: center;">Bine ai venit pe Freelancing Studenți!</h1>
-    
-    <p style="text-align: center;">Căutați proiecte interesante? Vino alături de noi și începe să lucrezi pe platforma noastră!</p>
+<body id="top">
 
-    <p style="text-align: center;">
-        <a href="login.html">Conectează-te</a> sau <a href="creare-cont.html">Creează un cont</a> pentru a începe.
-    </p>
+    <header>
+        <div class="container">
+            <h1 class="logo">Freelancing Studenți</h1>
+            <nav>
+                <ul class="nav-buttons">
+                    <li><a href="index.html" class="nav-btn active">Acasă</a></li>
+                    <li><a href="about.html" class="nav-btn">Despre</a></li>
+                    <li><a href="login.html" class="nav-btn">Login</a></li>
+                    <li><a href="inregistrare.html" class="nav-btn">Înregistrare</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <footer style="text-align: center; font-size: 12px; color: gray; margin-top: 30px;">
+    <main>
+        <section class="login-section">
+            <h2>Bine ai venit pe <span style="color:#004aad;">Freelancing Studenți</span>!</h2>
+            <p>Platforma unde studenții și angajatorii se întâlnesc pentru proiecte reale și experiență practică.</p>
+
+            <div class="login-form" style="text-align: center;">
+                <h3>Începe chiar acum!</h3>
+                <p>Alătură-te comunității noastre și descoperă oportunități de colaborare academică și profesională.</p>
+
+                <div style="margin-top: 20px;">
+                    <a href="login.html" class="btn" style="display:inline-block; width:auto; margin:10px;">Conectează-te</a>
+                    <a href="inregistrare.html" class="btn" style="display:inline-block; width:auto; margin:10px; background-color:#86969b;">Creează un cont</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="login-section" style="padding-top:40px;">
+            <h3>De ce să alegi Freelancing Studenți?</h3>
+            <ul style="list-style:none; padding:0; margin-top:20px;">
+                <li>✅ Oportunități adaptate studiilor tale</li>
+                <li>✅ Colaborare directă între studenți și angajatori</li>
+                <li>✅ Experiență reală pentru CV-ul tău</li>
+                <li>✅ Mediu sigur și prietenos</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
         <p>Confidențialitatea datelor tale este foarte importantă pentru noi. Toate informațiile tale sunt protejate.</p>
         <p>&copy; 2025 Freelancing Studenți. Toate drepturile rezervate.</p>
     </footer>
+<a href="#top" id="back-to-top">⬆️</a>
 </body>
 </html>
