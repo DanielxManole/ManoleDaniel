@@ -3,31 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajutor - Freelancing Studenți</title>
+    <title>Ajutor și Suport - Freelancing Studenți</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 style="text-align: center;">Ajutor și Suport</h1>
-    
-    <p style="text-align: center;">Dacă ai întrebări sau probleme, mai jos găsești câteva informații utile:</p>
+<body id="top">
+    <header>
+        <div class="container">
+            <h1 class="logo">Freelancing Studenți</h1>
+            <nav>
+                <ul class="nav-buttons">
+                    <li><a href="index.html" class="nav-btn">Acasă</a></li>
+                    <li><a href="about.html" class="nav-btn">Despre</a></li>
+                    <li><a href="login.html" class="nav-btn">Login</a></li>
+                    <li><a href="inregistrare.html" class="nav-btn">Înregistrare</a></li>
+                    <li><a href="about.html" class="nav-btn active">Ajutor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h2>Întrebări frecvente</h2>
-    <ul>
-        <li><a href="#intrebare1">Cum mă pot înregistra pe platformă?</a></li>
-        <li><a href="#intrebare2">Cum pot căuta proiecte?</a></li>
-        <li><a href="#intrebare3">Cum aplic la un proiect?</a></li>
-    </ul>
+    <main>
+        <section class="login-section">
+            <h2>Ajutor și Suport</h2>
+            <p>Dacă întâmpini probleme sau ai nevoie de clarificări, această pagină îți oferă informațiile de care ai nevoie pentru a naviga și utiliza platforma Freelancing Studenți.</p>
 
-    <h3 id="intrebare1">Cum mă pot înregistra pe platformă?</h3>
-    <p>Poți crea un cont accesând pagina de înregistrare și completând formularul cu datele tale personale.</p>
+            <div class="login-form" style="max-width: 700px;">
+                <h3>Întrebări frecvente (FAQ)</h3>
+                <ul style="list-style: none; padding: 0; margin-top: 15px;">
+                    <li><a href="#intrebare1" class="social">Cum mă pot înregistra pe platformă?</a></li>
+                    <li><a href="#intrebare2" class="social">Cum pot căuta proiecte?</a></li>
+                    <li><a href="#intrebare3" class="social">Cum aplic la un proiect?</a></li>
+                    <li><a href="#intrebare4" class="social">Cum îmi pot edita profilul?</a></li>
+                    <li><a href="#intrebare5" class="social">Cum pot contacta un angajator sau freelancer?</a></li>
+                </ul>
+            </div>
 
-    <h3 id="intrebare2">Cum pot căuta proiecte?</h3>
-    <p>După ce te loghezi, poți căuta proiecte accesând secțiunea "Proiecte" unde vei vedea o listă cu proiectele disponibile.</p>
+            <article id="intrebare1" class="login-form" style="max-width: 700px; margin-top: 30px;">
+                <h3>1️⃣ Cum mă pot înregistra pe platformă?</h3>
+                <p>Accesează pagina <a href="register.html" class="social">Înregistrare</a>, completează formularul cu numele, adresa de email, parola și tipul de utilizator (freelancer sau angajator), apoi apasă pe „Creează cont”. Vei primi un email de confirmare.</p>
+            </article>
 
-    <h3 id="intrebare3">Cum aplic la un proiect?</h3>
-    <p>Odată ce ai găsit un proiect care te interesează, poți aplica printr-un simplu clic pe butonul "Aplică".</p>
+            <article id="intrebare2" class="login-form" style="max-width: 700px; margin-top: 30px;">
+                <h3>2️⃣ Cum pot căuta proiecte?</h3>
+                <p>După autentificare, accesează secțiunea <a href="proiecte.html" class="social">Proiecte</a>. Poți folosi filtrele de căutare (categorie, durată, buget) pentru a găsi proiectele potrivite intereselor și abilităților tale.</p>
+            </article>
 
-    <footer style="text-align: center; font-size: 12px; color: gray; margin-top: 30px;">
+            <article id="intrebare3" class="login-form" style="max-width: 700px; margin-top: 30px;">
+                <h3>3️⃣ Cum aplic la un proiect?</h3>
+                <p>Selectează proiectul dorit, citește cerințele și apasă pe butonul <strong>„Aplică acum”</strong>. Completează mesajul de intenție și atașează eventual un portofoliu sau CV pentru a crește șansele de selecție.</p>
+            </article>
+
+            <article id="intrebare4" class="login-form" style="max-width: 700px; margin-top: 30px;">
+                <h3>4️⃣ Cum îmi pot edita profilul?</h3>
+                <p>După logare, mergi în secțiunea <a href="profil.html" class="social">Profilul meu</a>. De acolo poți actualiza informațiile personale, fotografia, abilitățile și linkurile către portofoliul tău extern.</p>
+            </article>
+
+            <article id="intrebare5" class="login-form" style="max-width: 700px; margin-top: 30px;">
+                <h3>5️⃣ Cum pot contacta un angajator sau freelancer?</h3>
+                <p>Platforma oferă un sistem intern de mesagerie. Accesează <a href="mesaje.html" class="social">Mesaje</a> și selectează utilizatorul dorit. Poți trimite și primi mesaje în siguranță, fără a dezvălui date personale până la confirmarea colaborării.</p>
+            </article>
+
+            <div class="login-form" style="max-width: 700px; margin-top: 30px;">
+                <h3>Contactează echipa de suport</h3>
+                <p>Dacă nu ai găsit răspunsul la întrebarea ta, ne poți scrie direct:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>📧 Email: <a href="mailto:support@freelancingstudenti.ro" class="social">support@freelancingstudenti.ro</a></li>
+                    <li>📞 Telefon: +40 729 745 340</li>
+                    <li>🕒 Program: Luni - Vineri, 09:00 - 18:00</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Ai nevoie de asistență suplimentară? Contactează echipa noastră de suport — suntem aici să te ajutăm.</p>
         <p>&copy; 2025 Freelancing Studenți. Toate drepturile rezervate.</p>
     </footer>
+<a href="#top" id="back-to-top">⬆️</a>
 </body>
 </html>

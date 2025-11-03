@@ -4,22 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalii Proiect - Freelancing Studenți</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 style="text-align: center;">Detalii Proiect</h1>
+<body id="top">
 
-    <div style="text-align: center;">
-        <h2>Creare site web personalizat</h2>
-        <p><strong>Descriere:</strong> Ne dorim un site web simplu pentru un portofoliu personal, cu câteva secțiuni precum "Despre mine", "Proiecte", și un formular de contact.</p>
-        <p><strong>Cerinte:</strong> HTML, CSS, JavaScript</p>
-        <p><strong>Durata estimată:</strong> o săptămână</p>
-        <p><strong>Buget:</strong> un pachet de Dunhill Negru</p>
-
-        <button><a href="aplicare-proiect.html">Aplică acum</a></button>
+<header>
+    <div class="container">
+        <h1 class="logo">Freelancing Studenți</h1>
+        <nav>
+            <ul class="nav-buttons">
+                <li><a href="index.html" class="nav-btn">Acasă</a></li>
+                <li><a href="about.html" class="nav-btn">Despre</a></li>
+                <li><a href="proiecte.html" class="nav-btn">Proiecte</a></li>
+                <li><a href="profil.html" class="nav-btn">Profil</a></li>
+                <li><a href="about.html" class="nav-btn">Ajutor</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <footer style="text-align: center; font-size: 12px; color: gray; margin-top: 30px;">
-        <p>&copy; 2025 Freelancing Studenți. Toate drepturile rezervate.</p>
-    </footer>
+<main>
+    <section class="login-section">
+        <h2>Detalii Proiect</h2>
+        <p>Vezi mai jos toate informațiile despre proiect și aplică dacă te potrivești cu cerințele.</p>
+
+        <div class="login-form" style="max-width: 700px; margin: 30px auto;">
+            <h3>Creare site web personalizat</h3>
+            <p><strong>Descriere:</strong> Ne dorim un site web simplu pentru un portofoliu personal, cu secțiuni precum "Despre mine", "Proiecte" și un formular de contact. Design-ul trebuie să fie responsive și ușor de utilizat.</p>
+            
+            <p><strong>Cerințe tehnice:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Durata estimată:</strong> 1 săptămână</p>
+            <p><strong>Buget:</strong> 150 EUR</p>
+
+            <p style="text-align:center; margin-top:20px;">
+                <a href="aplicare-proiect.html" class="btn">Aplică acum</a>
+            </p>
+        </div>
+
+        <div class="login-form" style="max-width: 700px; margin: 30px auto;">
+            <h3>Detalii suplimentare</h3>
+            <ul style="list-style:none; padding:0;">
+                <li>📅 Termen limită: 10 noiembrie 2025</li>
+                <li>💬 Contact client: client@example.com</li>
+                <li>🌐 Livrare proiect: fișiere HTML/CSS/JS și acces la hosting (opțional)</li>
+                <li>⚠️ Notă: Proiectul trebuie să respecte bunele practici de dezvoltare web și să fie compatibil cu majoritatea browserelor.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Freelancing Studenți – Conectăm studenții cu proiecte reale și oportunități de dezvoltare.</p>
+    <p>&copy; 2025 Freelancing Studenți. Toate drepturile rezervate.</p>
+</footer>
+<a href="#top" id="back-to-top">⬆️</a>
 </body>
 </html>

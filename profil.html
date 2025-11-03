@@ -4,21 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil - Freelancing Studenți</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 style="text-align: center;">Profilul Tău</h1>
+<body id="top">
 
-    <div style="text-align: center;">
-        <p><strong>Nume:</strong> Manole Daniel</p>
-        <p><strong>Email:</strong> manoledaniel2004@gmail.com</p>
-        <p><strong>Tip utilizator:</strong> șomer</p>
-        <p><strong>Descriere:</strong> Sunt un developer pasionat de web și mobile development, dar n-am noroc să-mi găsesc un job.</p>
-
-        <p><a href="editare-profil.html">Editează profilul</a></p>
+<header>
+    <div class="container">
+        <h1 class="logo">Freelancing Studenți</h1>
+        <nav>
+            <ul class="nav-buttons">
+                <li><a href="index.html" class="nav-btn">Acasă</a></li>
+                <li><a href="about.html" class="nav-btn">Despre</a></li>
+                <li><a href="proiecte.html" class="nav-btn">Proiecte</a></li>
+                <li><a href="profil.html" class="nav-btn active">Profil</a></li>
+                <li><a href="about.html" class="nav-btn">Ajutor</a></li>
+            </ul>
+        </nav>
     </div>
+</header>
 
-    <footer style="text-align: center; font-size: 12px; color: gray; margin-top: 30px;">
-        <p>&copy; 2025 Freelancing Studenți. Toate drepturile rezervate.</p>
-    </footer>
+<main>
+    <section class="login-section">
+        <h2>Profilul Tău</h2>
+        <p>Gestionează informațiile contului tău și actualizează datele personale pentru a fi mai ușor de găsit de angajatori.</p>
+
+        <div class="login-form" style="max-width: 600px; margin: 30px auto;">
+            <h3>Informații personale</h3>
+            <p><strong>Nume:</strong> Manole Daniel</p>
+            <p><strong>Email:</strong> manoledaniel2004@gmail.com</p>
+            <p><strong>Tip utilizator:</strong> Freelancer</p>
+            <p><strong>Descriere:</strong> Sunt un developer pasionat de web și mobile development, dornic să contribui la proiecte interesante și să învăț în același timp.</p>
+
+            <p style="text-align:center; margin-top:20px;">
+                <a href="editare-profil.html" class="btn">Editează profilul</a>
+            </p>
+        </div>
+
+        <div class="login-form" style="max-width: 600px; margin: 30px auto;">
+            <h3>Setări suplimentare</h3>
+            <ul style="list-style:none; padding:0;">
+                <li>🔒 Schimbă parola</li>
+                <li>📧 Preferințe notificări prin email</li>
+                <li>🗑️ Șterge contul</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Gestionează-ți profilul pentru a crește șansele de a obține proiecte interesante.</p>
+    <p>&copy; 2025 Freelancing Studenți. Toate drepturile rezervate.</p>
+</footer>
+
 </body>
 </html>
