@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +7,29 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Body */
 body {
-    background: linear-gradient(135deg, #e5eaf5, #cbdaf0);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #000;
     line-height: 1.6;
-    min-height: 100vh;
+    background: url('PNGS/background.png') repeat center center,
+                linear-gradient(270deg, #7fb3d5, #5c6073);
+    background-blend-mode: overlay;
+    animation: techGradient 20s ease infinite alternate;
 }
 
+
+/* Header */
 header {
     background: linear-gradient(90deg, #7fb3d5, #577e8a);
     color: #fff;
     padding: 15px 0;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .container {
@@ -32,11 +44,15 @@ header .container {
 .logo {
     font-size: 1.6em;
     font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
 }
 
+/* Navigație */
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
     gap: 20px;
 }
 
@@ -44,16 +60,29 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
-nav a:hover, nav a.active {
-    text-decoration: underline;
+nav a:hover {
+    background: #fff;
+    color: #577e8a;
+    box-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
 
+nav a.active {
+    background: #004aad;
+    color: #fff;
+    box-shadow: 0 0 12px #004aad;
+}
+
+/* Secțiune principală */
 .login-section {
     text-align: center;
     padding: 60px 20px;
     color: #000;
+    animation: fadeIn 1.5s ease;
 }
 
 .login-section h2 {
@@ -67,14 +96,21 @@ nav a:hover, nav a.active {
     color: #000;
 }
 
+/* Formulare */
 .login-form {
     background: linear-gradient(135deg, #577e8a, #d7e3fc);
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 30px auto;
     padding: 30px 40px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: left;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.login-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
 .login-form fieldset {
@@ -101,6 +137,24 @@ nav a:hover, nav a.active {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.login-form input:focus,
+.login-form select:focus {
+    outline: none;
+    border-color: #577e8a;
+    box-shadow: 0 0 5px rgba(87, 126, 138, 0.5);
+    background-color: #f8f8f8;
+}
+
+.login-form input::placeholder {
+    color: #333;
+    opacity: 1;
+}
+
+.login-form select {
+    color: #333;
 }
 
 .login-form .btn {
@@ -114,14 +168,15 @@ nav a:hover, nav a.active {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    transition: background 0.4s;
+    transition: background 0.4s, transform 0.3s;
 }
 
 .login-form .btn:hover {
     background-color: #86969b;
-;
+    transform: scale(1.05);
 }
 
+/* Social login */
 .social-login {
     text-align: center;
     margin-top: 15px;
@@ -137,6 +192,7 @@ nav a:hover, nav a.active {
     text-decoration: underline;
 }
 
+/* Extra links */
 .extra-links {
     margin-top: 25px;
 }
@@ -154,41 +210,18 @@ nav a:hover, nav a.active {
     text-decoration: underline;
 }
 
+/* Footer */
 footer {
     background: linear-gradient(90deg, #494D5F, #5c6073);
     color: #fff;
     text-align: center;
     padding: 20px 10px;
     font-size: 13px;
-    margin-top: 20px;
+    margin-top: 23px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.login-form input::placeholder {
-    color: #333;
-    opacity: 1;
-}
-
-.login-form select {
-    color: #333;
-}
-
-.login-form input:focus,
-.login-form select:focus {
-    outline: none;
-    border-color: #577e8a;
-    box-shadow: 0 0 5px rgba(87, 126, 138, 0.5);
-    background-color: #f8f8f8;
-}
-
-.login-form {
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-.login-form:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
+/* Checkbox acord */
 .acord-container {
     display: flex;
     align-items: center;
@@ -207,26 +240,78 @@ footer {
     cursor: pointer;
 }
 
+/* Scroll smooth */
 html {
     scroll-behavior: smooth;
 }
 
+/* Back to top */
 #back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #577e8a;
     color: white;
-    padding: 12px 16px;
+    padding: 12px;
     border-radius: 50%;
+    opacity: 0;
+    transform: translateY(20px) scale(0.8) rotate(0deg);
     text-decoration: none;
     font-size: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     z-index: 1000;
-    display: block;
-    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.6s ease; /* acum animăm și rotirea */
+}
+
+#back-to-top.show {
+    opacity: 0.9;
+    transform: translateY(0) scale(1) rotate(0deg); /* poziție normală */
+    pointer-events: auto;
 }
 
 #back-to-top:hover {
-    background-color: #86969b;
+    opacity: 1;
+    transform: translateY(-3px) scale(1.2) rotate(360deg); /* 🔥 rotire + efect de ridicare */
+}
+
+.code-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0; /* sub header și conținut */
+}
+
+.code-rain span {
+    position: absolute;
+    top: -100%;
+    font-family: monospace;
+    color: rgba(0, 74, 173, 0.6); /* albastru site */
+    font-size: 12px;
+    opacity: 0.6;
+    animation: rain linear infinite;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes techGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rain {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
 }
