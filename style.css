@@ -1,24 +1,29 @@
-/* Reset */
+/* --- RESET & FONTURI NOI --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Body */
 body {
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400; /* Greutate normală */
     min-height: 100vh;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #000;
     line-height: 1.6;
-    background: url('PNGS/background.png') repeat center center,
-                linear-gradient(270deg, #7fb3d5, #5c6073);
-    background-blend-mode: overlay;
-    animation: techGradient 20s ease infinite alternate;
+    
+    /* FUNDAL NOU: Un pattern "blueprint" subtil */
+    background-color: #fdfdfd;
+    background-image: 
+        linear-gradient(rgba(170, 190, 210, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(170, 190, 210, 0.3) 1px, transparent 1px);
+    background-size: 35px 35px; /* Mărimea grilei */
+    background-attachment: fixed;
 }
+
 
 
 /* Header */
@@ -39,6 +44,15 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.container {
+    width: 90%; /* Ocupă 90% din lățimea paginii */
+    max-width: 1100px; /* Dar nu mai mult de 1100px */
+    
+    /* Aici e magia care centrează: */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo {
@@ -98,19 +112,20 @@ nav a.active {
 
 /* Formulare */
 .login-form {
-    background: linear-gradient(135deg, #577e8a, #d7e3fc);
+    background: #ffffff; /* Culoare solidă albă */
+    border: 1px solid rgba(170, 190, 210, 0.5); /* Bordură subtilă */
     max-width: 800px;
     margin: 30px auto;
     padding: 30px 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Umbră mai fină */
     text-align: left;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .login-form:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* Umbră mai fină la hover */
 }
 
 .login-form fieldset {
@@ -250,12 +265,13 @@ html {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #577e8a;
+    background-color: #577e8a; /* Păstrăm culoarea ta */
     color: white;
-    padding: 12px;
+    padding: 12px; /* Mărim puțin zona de click */
     border-radius: 50%;
+    
     opacity: 0;
-    transform: translateY(20px) scale(0.8) rotate(0deg);
+    transform: translateY(20px) scale(0.8);
     text-decoration: none;
     font-size: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -263,40 +279,537 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    
     pointer-events: none;
-    transition: opacity 0.4s ease, transform 0.6s ease; /* acum animăm și rotirea */
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 #back-to-top.show {
     opacity: 0.9;
-    transform: translateY(0) scale(1) rotate(0deg); /* poziție normală */
-    pointer-events: auto;
+    transform: translateY(0) scale(1); /* Revine la poziția normală */
+    pointer-events: auto; /* Devine click-abil */
 }
 
 #back-to-top:hover {
     opacity: 1;
-    transform: translateY(-3px) scale(1.2) rotate(360deg); /* 🔥 rotire + efect de ridicare */
+    transform: translateY(-3px) scale(1.1); /* Se ridică puțin și se mărește */
+    background-color: #004aad; /* Schimbăm culoarea la hover */
 }
 
-.code-rain {
-    position: fixed;
-    top: 0;
+#back-to-top img {
+    width: 25px; /* Ajustează dimensiunea imaginii tale */
+    height: 25px;
+    filter: brightness(0) invert(1); /* Face imaginea albă, dacă e neagră */
+}
+
+.valoare-section {
+    padding: 60px 20px;
+    background-color: transparent; /* Fără fundal */
+    text-align: center;
+    
+    /* Adaugă o linie subtilă deasupra */
+    border-top: 2px solid rgba(170, 190, 210, 0.4); 
+    
+    /* Și un pic de spațiu deasupra liniei */
+    margin-top: 40px; 
+}
+
+.valoare-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.valoare-section p {
+    margin-bottom: 40px; /* Spațiu mai mare sub paragraf */
+    font-size: 18px;
+    color: #333;
+}
+
+.valoare-container {
+    display: flex;
+    flex-wrap: wrap; /* Să se așeze frumos pe mobil */
+    justify-content: center;
+    gap: 20px;
+}
+
+.valoare-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    flex-basis: 300px; /* Lățime de bază */
+    flex-grow: 1;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valoare-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.valoare-card h3 {
+    color: #004aad; /* Folosim albastrul tău activ */
+    margin-bottom: 10px;
+}
+
+.hero-section {
+    padding: 70px 100px;
+    text-align: center;
+    color: #000;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 55px; 
+    font-weight: 700; /* Folosim font-weight 700 (bold) din Google Fonts */
+    color: #004aad; 
+    margin-bottom: 20px;
+    
+    /* Adaugă asta: controlează spațiul dintre rânduri */
+    line-height: 1.3; 
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Ne folosim de clasa .btn pe care o ai deja din 'login-form' */
+.hero-cta .btn {
+    display: inline-block;
+    width: auto;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Butonul principal (Înregistrare) */
+.hero-cta .btn-primary {
+    background-color: #577e8a;
+    color: white;
+}
+.hero-cta .btn-primary:hover {
+    background-color: #86969b;
+    transform: scale(1.05);
+}
+
+/* Butonul secundar (Login) */
+.hero-cta .btn-secondary {
+    background-color: transparent;
+    color: #577e8a;
+    border: 2px solid #577e8a;
+}
+.hero-cta .btn-secondary:hover {
+    background-color: #577e8a;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* --- Stiluri pentru Paginile cu Layout Grid --- */
+
+/* Aplicăm layout-ul de Grid DOAR pe paginile cu clasa .pagina-grid */
+.pagina-grid {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "aside main"
+        "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    gap: 10px;
+    min-height: 100vh;
+}
+
+/* Stilăm elementele DOAR când sunt în .pagina-grid */
+.pagina-grid header { grid-area: header; }
+.pagina-grid nav { 
+    grid-area: nav; 
+    background: #7fb3d5; 
+    padding: 20px; 
+}
+.pagina-grid main { grid-area: main; padding: 20px; }
+.pagina-grid aside { 
+    grid-area: aside; 
+    background: #d7e3fc; 
+    padding: 20px; 
+    display: block; 
+}
+.pagina-grid footer {
+    grid-area: footer;
+    /* Păstrăm consistența cu footer-ul global */
+    background: linear-gradient(90deg, #494D5F, #5c6073);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 13px;
+    margin-top: 0; /* Anulăm margin-top-ul global pe aceste pagini */
+}
+
+/* Navigarea verticală din paginile grid */
+.pagina-grid nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Link-uri verticale */
+    gap: 15px;
+}
+.pagina-grid nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 500;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+.pagina-grid nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Media query pentru layout-ul grid */
+@media (max-width: 900px) {
+    .pagina-grid {
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-grid nav, .pagina-grid aside { 
+        text-align: center; 
+        padding: 10px; 
+    }
+    
+    /* Pe mobil, facem nav-ul orizontal din nou */
+    .pagina-grid nav ul {
+        flex-direction: row; 
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* --- Stiluri pentru Elemente Specifice (Proiecte, Aplicare) --- */
+/* Acestea sunt acum globale și vor funcționa corect */
+
+/* Carduri proiecte */
+.proiecte-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.proiect-card {
+    background: #ffffff;
+    border: 1px solid rgba(170, 190, 210, 0.5);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proiect-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.proiect-card img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Formular aplicare */
+.aplicare-form {
+    background: #ffffff;
+    border: 1px solid rgba(170, 190, 210, 0.5);
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.aplicare-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.aplicare-form input,
+.aplicare-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.aplicare-form button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #577e8a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.aplicare-form button:hover {
+    background-color: #86969b;
+}
+
+/* --- Stiluri NOI pentru Pagina "Despre" --- */
+
+/* Secțiunea Titlu (simplă) */
+.about-title-section {
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 2px solid rgba(170, 190, 210, 0.4); /* Linie fină */
+}
+.about-title-section h2 {
+    font-size: 40px;
+    color: #004aad; /* Culoarea ta principală */
+    margin-bottom: 10px;
+}
+.about-title-section p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Secțiunea Misiune (Grid 2 coloane) */
+.about-mission-section {
+    padding: 60px 20px;
+    background-color: #f4f7f9;
+    
+    /* Adaugă liniile astea 2: */
+    /* Creează o separare vizuală față de fundalul "blueprint" */
+    border-top: 2px solid rgba(170, 190, 210, 0.4);
+    border-bottom: 2px solid rgba(170, 190, 210, 0.4);
+}
+.about-mission-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 pentru text, 1/3 pentru valori */
+    gap: 40px;
+    align-items: flex-start;
+}
+.about-mission-grid h3 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 15px;
+}
+.about-mission-grid p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 15px;
+}
+.about-values-list ul {
+    list-style: none; /* Scoate bulinele */
+    padding: 0;
+}
+.about-values-list li {
+    font-size: 16px;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 500;
+    margin-bottom: 10px;
+    
+    /* AICI E DESIGNUL NOU */
+    background-color: #ffffff; /* Fundal alb curat */
+    color: #004aad; /* Culoarea ta activă */
+    padding: 12px 15px;
+    border-radius: 8px;
+    
+    /* Adăugăm un accent (se potrivește cu tema) */
+    border-left: 4px solid #7fb3d5; 
+    
+    /* O umbră subtilă ca pe carduri */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* Secțiunea Contact */
+.about-contact-section {
+    padding: 60px 20px;
+    border-top: 2px solid rgba(170, 190, 210, 0.4);
+}
+.about-contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+.about-contact-section p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Stiluri partajate (le adăugăm ca să fie complet) */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: inline-block; /* Le facem să stea frumos în centru */
+    text-align: left; /* Aliniem textul din listă la stânga */
+}
+.contact-list li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.contact-list li a {
+    color: #004aad;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact-list li a:hover {
+    text-decoration: underline;
+}
+.social-links {
+    text-align: center;
+    margin-top: 30px;
+}
+.social-links .social {
+    color: #004aad;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, sans-serif;
+    margin: 0 10px;
+}
+.social-links .social:hover {
+    text-decoration: underline;
+}
+
+/* Responsive pentru Grid-ul Misiunii */
+@media (max-width: 768px) {
+    .about-mission-grid {
+        grid-template-columns: 1fr; /* O singură coloană pe mobil */
+    }
+}
+
+/* --- Stil pentru Formularul de Contact --- */
+
+/* Stil pentru <textarea> (să arate ca un <input>) */
+.login-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    /* Asigură-te că folosește fontul paginii */
+    font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: vertical; /* Permite utilizatorului să-l mărească vertical */
+    min-height: 120px; /* O înălțime minimă decentă */
+}
+
+/* Stil pentru mesajul de succes (ascuns inițial) */
+.form-success-message {
+    text-align: center;
+    font-size: 16px;
+    color: #388E3C; /* Un verde de succes */
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, sans-serif;
+    font-weight: 500;
+    margin-top: 15px;
+    display: none; /* Îl facem vizibil cu JS */
+}
+
+/* --- Stiluri pentru Pagina Politica de Confidențialitate --- */
+
+/* Ajustăm secțiunea principală a politicii */
+.policy-content {
+    padding: 0 20px 60px 20px; /* Spațiu jos, dar nu sus (are deja titlul) */
+}
+
+/* Stil pentru listele din politică */
+.policy-list {
+    list-style-type: disc; /* Buline normale */
+    padding-left: 20px; /* Aliniere corectă */
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.policy-list li {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* Stil pentru separatorul dintre secțiuni */
+.policy-divider {
+    border: 0;
+    border-top: 1px solid #eee; /* O linie foarte fină */
+    margin: 25px 0;
+}
+
+/* --- Stil Banner Cookie-uri --- */
+
+#cookie-banner {
+    position: fixed; /* Stă pe loc la scroll */
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 0; /* sub header și conținut */
+    background: #494D5F; /* O culoare închisă din footer-ul tău */
+    color: white;
+    padding: 20px 0;
+    z-index: 1001; /* Peste tot, dar sub back-to-top dacă e nevoie */
+    
+    /* Îl ascundem inițial cu JS, dar e bine să avem și o tranziție */
+    transform: translateY(100%); /* Începe ascuns sub pagină */
+    display: none; /* Ascuns by default */
+    transition: transform 0.5s ease;
 }
 
-.code-rain span {
-    position: absolute;
-    top: -100%;
-    font-family: monospace;
-    color: rgba(0, 74, 173, 0.6); /* albastru site */
-    font-size: 12px;
-    opacity: 0.6;
-    animation: rain linear infinite;
+#cookie-banner.show {
+    display: block;
+    transform: translateY(0); /* Alunecă în sus */
+}
+
+#cookie-banner p {
+    color: white;
+    margin: 0;
+    flex-grow: 1; /* Ocupă spațiul disponibil */
+    font-size: 14px;
+}
+
+#cookie-banner .btn {
+    /* Refolosim stilul .btn, dar ajustăm culorile */
+    background-color: #7fb3d5; /* Albastrul tău deschis */
+    color: white;
+    padding: 10px 20px;
+    width: auto; /* Nu 100% */
+    margin: 0;
+    flex-shrink: 0; /* Nu se micșorează */
+}
+
+#cookie-banner .btn:hover {
+    background-color: #86969b; /* Culoarea de hover */
 }
 
 /* Keyframes */
@@ -309,9 +822,4 @@ html {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
-
-@keyframes rain {
-    0% { transform: translateY(-100%); }
-    100% { transform: translateY(100%); }
 }
