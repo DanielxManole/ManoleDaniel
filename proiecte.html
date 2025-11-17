@@ -5,90 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proiecte Disponibile - Freelancing Studenți</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Grid Layout pentru pagina proiecte */
-        body {
-            display: grid;
-            grid-template-areas:
-                "header header"
-                "nav main"
-                "aside main"
-                "footer footer";
-            grid-template-columns: 200px 1fr;
-            grid-template-rows: auto 1fr auto auto;
-            gap: 10px;
-            min-height: 100vh;
-        }
-
-        header { grid-area: header; }
-        nav { grid-area: nav; background: #7fb3d5; padding: 20px; }
-        main { grid-area: main; padding: 20px; }
-        aside { grid-area: aside; background: #d7e3fc; padding: 20px; display: block; }
-        footer { grid-area: footer; text-align: center; padding: 20px; background: #494D5F; color: white; }
-
-        /* Carduri proiecte */
-        .proiecte-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .proiect-card {
-            background: linear-gradient(135deg, #577e8a, #d7e3fc);
-            padding: 20px;
-            border-radius: 12px;
-            flex: 1 1 250px;
-            max-width: 300px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .proiect-card img {
-            display: block;
-            margin: 0 auto 10px;
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        /* Buton Mergi sus */
-        #back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #577e8a;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 50%;
-            text-decoration: none;
-            font-size: 18px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
-        #back-to-top:hover {
-            background-color: #86969b;
-        }
-
-        /* Responsive @media */
-        @media (max-width: 900px) {
-            body {
-                grid-template-areas:
-                    "header"
-                    "nav"
-                    "main"
-                    "aside"
-                    "footer";
-                grid-template-columns: 1fr;
-            }
-
-            nav, aside { text-align: center; padding: 10px; }
-            .proiect-card { max-width: 100%; margin: 0 auto; }
-            h1, h2, h3 { font-size: 1.2rem; }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 </head>
-<body id="top">
+<body id="top" class="pagina-grid">
 
 <header>
     <div class="container">
