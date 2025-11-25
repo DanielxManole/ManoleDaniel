@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercitiul 2</title>
+</head>
+<body>
+    <h1>Exercițiul 2</h1>
+    <p>Rezolvarea se află în consola browser-ului (Apăsați F12 sau Inspect -> Console).</p>
+
+    <script>
+        var tranzactie1 = true;
+        var tranzactie2 = false;
+
+        if (tranzactie1)
+        {
+            console.log("Tranzacție acceptată!");
+        }
+
+        if (tranzactie2)
+        {
+            console.log("Tranzacție acceptată!");
+        }
+        else
+        {
+            console.log("Tranzacție refuzată!");
+        }
+
+        /*
+            Prima instrucțiune se evaluează la 'if (true)', deoarece 'tranzactie1' are valoarea 'true'. 
+        Condiția fiind adevarată, codul din interiorul lui 'if' se execută și afișează "Tranzacție acceptată!".
+
+            A doua instrucțiune se evaluează la 'if (false)', deoarece 'tranzactie2' are valoarea 'false'.
+        Condiția fiind falsă, codul din interiorul lui 'if' nu se execută.
+
+            Deoarece instrucțiunea 'if' are și un 'else', iar condiția inițială a fost falsă,
+        codul din interiorul lui 'else' se execută, afișând "Tranzacție refuzată!".
+        */
+    </script>
+</body>
+</html>
