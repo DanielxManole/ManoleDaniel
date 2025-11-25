@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercitiul 4</title>
+</head>
+<body>
+    <h1>Exercițiul 4</h1>
+    <p>Rezolvarea se află în consola browser-ului (Apăsați F12 sau Inspect -> Console).</p>
+
+    <script>
+         var l1 = 13;
+         var l2 = 17;
+         var l3 = 13;
+         var l4 = 17;
+
+        console.log("Numerele date sunt: " + l1 + ", " + l2 + ", " + l3 + ", " + l4);
+
+        var Lungime, latime;
+
+        if (l1 === l3 && l2 === l4)
+        {
+            Lungime = l1;
+            latime = l2;
+        }
+        else if (l1 === l2 && l3 === l4)
+        {
+            Lungime = l1;
+            latime = l3;
+        }
+        else if (l1 === l4 && l2 === l3)
+        {
+            Lungime = l1;
+            latime = l2;
+        }
+
+        if (Lungime !== undefined && latime !== undefined)
+        {
+            var perimetrul = 2*(Lungime+latime);
+            var aria = Lungime*latime;
+
+            console.log("Cele 4 numere pot reprezenta laturi ale unui dreptunghi!");
+            console.log("Perimetrul este: " + perimetrul + ". Aria este: " + aria + ".");
+        }
+        else
+        {
+            console.log("Cele 4 numere nu pot reprezenta laturi ale unui dreptunghi!");
+        }
+    </script>
+</body>
+</html>

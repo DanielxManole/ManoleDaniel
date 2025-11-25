@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercitiul 3</title>
+</head>
+<body>
+    <h1>Exercițiul 3</h1>
+    <p>Rezolvarea se află în consola browser-ului (Apăsați F12 sau Inspect -> Console).</p>
+
+    <script>
+        var nr1 = 15;
+        var nr2 = 4;
+        var nr3 = 12;
+
+        console.log("Numerele date sunt: " + nr1 + ", " + nr2 + ", " + nr3);
+        console.log("Numerele în ordine descrescătoare:");
+
+        if (nr1 >= nr2 && nr1 >= nr3)
+        {
+            if (nr2 >= nr3) {
+                console.log(nr1, nr2, nr3);
+            }
+            else
+            {
+                console.log(nr1, nr3, nr2);
+            }
+        }
+        else if (nr2 >= nr1 && nr2 >= nr3)
+        {
+            if (nr1 >= nr3)
+            {
+                console.log(nr2, nr1, nr3);
+            }
+            else
+            {
+                console.log(nr2, nr3, nr1);
+            }
+        }
+        else
+        {
+            if (nr1 >= nr2)
+            {
+                console.log(nr3, nr1, nr2);
+            }
+            else
+            {
+                console.log(nr3, nr2, nr1);
+            }
+        }
+    </script>
+</body>
+</html>
